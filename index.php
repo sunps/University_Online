@@ -1,25 +1,3 @@
-<?php
-
-if(!empty($_GET['status'])){
-    switch($_GET['status']){
-        case 'warn':
-            $statusMsgClass = 'alert-danger';
-            $statusMsg = '<strong>User Id or Password Was Incorrect, Please Try Again.</strong>';
-            break;
-        case 'inc':
-            $statusMsgClass = 'alert-warning';
-            $statusMsg = 'You Are Not Authorised User, Please Register First. ';
-            break;
-        case 'lg':
-            $statusMsgClass = 'alert-info';
-            $statusMsg = 'Login First. ';
-            break;
-        default:
-            $statusMsgClass = '';
-            $statusMsg = '';
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,12 +55,7 @@ if(!empty($_GET['status'])){
 		<div class="new-account-form">
 		<h2 class="heading-w3-agile">Sign In</h2>
 
-		<?php if(!empty($statusMsg)){
-        echo '
-        <div class="alert '.$statusMsgClass.'" role="alert">'.$statusMsg.'</div>
-        ';
-    } ?>
-			<form action="auth.php" method="post">
+				<form action="#" method="post">
 			<div class="inputs-w3ls">
 				<p>User I'd</p>
 				<i class="fa fa-envelope" aria-hidden="true"></i>
